@@ -7,6 +7,12 @@
 {
     "name": "Smol Course Development Environment",
     "image": "mcr.microsoft.com/devcontainers/python:3.12",
+    "runArgs": [
+      "--device=/dev/dxg",
+      "--gpus=all",
+      "--env=NVIDIA_VISIBLE_DEVICES=all",
+      "--env=NVIDIA_DRIVER_CAPABILITIES=all"
+    ],
     "forwardPorts": [
       8888
     ],
